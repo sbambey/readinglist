@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="col-xs-12">
+		<h1>New List</h1>
+		<% @list.errors.full_messages.each do |msg| %>
+			<p><%= msg %></p>
+		<% end %>
+		<%= form_for @list do |f| %>
+			<%= f.label :title, "List Title" %>
+			<%= f.text_field :title %>
+
+			<%= f.fields_for :list_items do |builder| %>
+				<%= builder.label :name %>
+				<%= builder.text_field :name %>
+			<% end %>
+
+			<%= f.submit "Create list" %>
+		<% end %>
+	</div>
+</div>

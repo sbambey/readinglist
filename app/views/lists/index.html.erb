@@ -1,0 +1,9 @@
+<div class="container">
+	<div class="col-xs-12 col-md-6 col-md-offset-3 lists-wrapper">
+		<h1>Browse Reading Lists</h1>
+		<% @lists.each do |list| %>
+			<%= link_to list.title, list_path(list) %>
+		<% end %>
+		<%= link_to "Create a list", new_list_path %>
+	</div>
+</div>
