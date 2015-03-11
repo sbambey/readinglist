@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :list do
-    title "MyTitle"
+    name "MyName"
+    description "Some Description"
   end
 end

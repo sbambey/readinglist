@@ -1,0 +1,75 @@
+{
+ "kind": "books#volumes",
+ "totalItems": 1007,
+ "items": [
+  {
+   "kind": "books#volume",
+   "id": "YQPRsVOpBgwC",
+   "etag": "6zGdlrQ97jM",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/YQPRsVOpBgwC",
+   "volumeInfo": {
+    "title": "Starbucks",
+    "authors": [
+     "Marie Bussing-Burks"
+    ],
+    "publisher": "ABC-CLIO",
+    "publishedDate": "2009",
+    "description": "Follow the history of Starbucks on its journey from one local retail store in Seattle to a global chain of coffeehouses found in more than 47 countries around the world.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780313364587"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0313364583"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 154,
+    "printType": "BOOK",
+    "categories": [
+     "Business & Economics"
+    ],
+    "contentVersion": "0.0.2.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=YQPRsVOpBgwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=YQPRsVOpBgwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.ca/books?id=YQPRsVOpBgwC&printsec=frontcover&dq=Starbucks&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.ca/books?id=YQPRsVOpBgwC&dq=Starbucks&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.ca/books/about/Starbucks.html?hl=&id=YQPRsVOpBgwC"
+   },
+   "saleInfo": {
+    "country": "CA",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "CA",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.ca/books/download/Starbucks-sample-epub.acsm?id=YQPRsVOpBgwC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.ca/books/download/Starbucks-sample-pdf.acsm?id=YQPRsVOpBgwC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.ca/books/reader?id=YQPRsVOpBgwC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   },
+   "searchInfo": {
+    "textSnippet": "Follow the history of Starbucks on its journey from one local retail store in Seattle to a global chain of coffeehouses found in more than 47 countries around the world."
+   }
+  }
+ ]
+}

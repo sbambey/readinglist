@@ -1,0 +1,9 @@
+<%= image_tag @book["image_link"] %>
+<div class="added-text">
+	<p class="title"><%= @book["title"] %></p>
+	<p class="author">by <%= @book["author"] %></p>
+	<% if @book["categories"].present? %>
+		<p class="categories">Categories: <%= @book["categories"] %></p>
+	<% end %>
+	<a href="#" class="wrong_book">Not what you're looking for?</a>
+</div>

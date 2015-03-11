@@ -1,0 +1,24 @@
+<%= form_for @list do |f| %>
+<div class="row list-heading">
+	<div class="col-xs-12">
+		<h1>You're editing a list</h1>
+		<%= render "shared/text_field", f: f, attribute: :name, args: { placeholder: "List Name", label_class: "sr-only" } %>
+
+		<%= render "shared/text_field", f: f, attribute: :description, args: { placeholder: "List Description", label_class: "sr-only" } %>
+	</div>
+</div>
+
+<%= render "layouts/flash_messages", modified: true %>
+
+<div class="list-body">
+	<p class="lead">Time to add some awesome books</p>
+	
+	<%= f.fields_for :list_items do |builder| %>
+		<%= render "list_item_fields", f: builder %>
+	<% end %>
+
+	<div><%= link_to_add_fields "Add Book Title", f, :list_items %></div>
+	
+	<%= f.submit "Update", class: "btn btn-default btn-green btn-bottom" %>
+</div>
+<% end %>

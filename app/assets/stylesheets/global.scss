@@ -1,4 +1,99 @@
 body {
 	/*background: image-url("skulls.png");*/
-	padding-top:70px;
+	background-color: $body-bg;
+	padding-top: 20px;
+}
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover
+{
+  outline:0px !important;
+}
+.error-explanation {
+  color: $state-danger-text;
+}
+
+.navbar-wrapper {
+	border:$border-width solid $central-border;
+	padding:0;
+	margin-bottom: 20px;
+}
+.navbar-default {
+	background-color: $central-bg;
+	border:none;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+	background-color: $central-bg;
+	border-bottom: 5px solid $central-border;
+}
+.navbar {
+	margin-bottom: 0;
+}
+.navbar-default .navbar-text {
+  color: #666;
+}
+.navbar-default .navbar-link {
+  color: #666;
+  text-decoration: underline;
+  &:hover, &:focus {
+    color: #666;
+  }
+}
+.btn-navbar {
+  margin:11px 10px 10px 0;
+}
+
+.flash-messages {
+	padding:0;
+	margin:20px 0 0 0;
+}
+.modified {
+	margin:10px 0 10px 0;
+	padding:0;
+}
+
+.central-wrapper {
+	background-color:$central-bg;
+	border:$border-width solid $central-border;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+.form-p {
+	margin: 10px 0 0 0;
+}
+.btn-bottom {
+	margin-top: 20px;
+}
+
+.footer {
+	padding: 10px 20px;
+	p {
+		margin:0;
+	}
+	a {
+		margin-left:10px;
+	}
+}
+
+
+
+/* General */
+.top-m-10 {
+	margin-top:10px;
+}
+.btn-green {
+	border:2px solid #4cae4c;
+	&:hover, &:focus {
+		border:2px solid #4cae4c;
+		background:none;
+	}
 }

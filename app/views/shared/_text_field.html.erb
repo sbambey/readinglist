@@ -1,0 +1,13 @@
+<% errors = f.object.errors.full_messages_for(attribute) %>
+<%= content_tag :div, class: ["form-group", ("has-error has-feedback" if errors.present?)] do %>
+	<%= f.label attribute, class: "#{args[:label_class] || ""}" %>
+	<%= f.text_field attribute, class: "#{args[:field_class] || "form-control"}", 
+		placeholder: "#{args[:placeholder] || ""}" %>
+
+	<% if errors.present? %>
+		<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+		<span class="error-explanation">
+	    <%= errors.first %>
+	  </span>
+	<% end %>
+<% end %>

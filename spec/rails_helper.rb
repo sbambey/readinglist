@@ -13,6 +13,7 @@ require 'rspec/rails'
 require 'rspec/rails'
 require 'shoulda/matchers'
 require 'capybara/rspec'
+require 'webmock/rspec'
 include ActionDispatch::TestProcess
 
 # Requires supporting ruby files with custom matchers and macros, etc, in

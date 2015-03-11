@@ -15,7 +15,7 @@ RSpec.describe List, type: :model do
 
   it { is_expected.to accept_nested_attributes_for(:list_items) }
 
-  it { is_expected.to validate_presence_of(:title) }
+  it { is_expected.to validate_presence_of(:name) }
 
   
 end

@@ -1,0 +1,9 @@
+<div class="list-body">
+	<p class="lead">Browse @<%= @user.username %>'s lists</p>
+	<% @user.lists.each do |list| %>
+		<%= render "shared/list_panel", list: list %>
+	<% end %>
+	<% if @user == current_user %>
+		<%= link_to "Create list", new_list_path, class: "btn btn-default btn-green btn-bottom" %>
+	<% end %>
+</div>

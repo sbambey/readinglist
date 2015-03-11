@@ -79,4 +79,10 @@ guard :rspec, cmd: "spring rspec" do
 
   # Factories
   watch(%r{^spec/factories/(.+)_factory\.rb$})      { |m| ["app/models/#{m[1].singularize}.rb", "spec/models/#{m[1].singularize}_spec.rb"] }
+
+  # Services
+  #watch(%r{^app/services/(.+)\.rb$}) { |m| "spec/services/#{m[1]}_spec.rb" }
+
+  #watch("spec/factories_spec.rb") { "spec/factories_spec.rb" }
+  #watch("spec/factories/") { |m| "spec/factories_spec.rb" }
 end

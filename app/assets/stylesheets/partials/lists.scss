@@ -1,0 +1,125 @@
+.lists, .users {
+	.list-heading {
+		background-color: $list-heading;
+		margin-bottom: 20px;
+		padding:20px 0;
+		h1, h2 {
+			margin:0;
+		}
+		p {
+			margin:10px 0 0 0;
+		}
+		p.lead {
+			font-size: 17px;
+			margin-top:5px;
+		}
+		p.lower-lead {
+			font-size:15px;
+			margin-top: 0;
+		}
+		input {
+			margin-top: 10px;
+		}
+		.input-group {
+			margin: 10px auto 0 auto;
+			max-width:400px;
+			input {
+				margin:0;
+			}
+		}
+		.form-group:last-of-type {
+			margin-bottom: 0;
+		}
+		.btn-search {
+			padding:0;
+			border:none;
+		}
+	}
+
+	.list-body {
+		background:#fff;
+		p {
+			margin: 10px 0;
+		}
+		.book-input {
+			&:nth-of-type(n+2) {
+				margin-top: 10px;
+			}
+		}
+		.hidden-author[type=text] {
+			margin-top: 10px;
+		}
+
+		.panel-default {
+			border-color: $central-border;
+		}
+		.panel-body {
+			background-color: #fafafa;
+			padding-bottom:5px;
+		}
+		.search-index-image {
+			max-height:70px;
+		}
+		.index-listing {
+			p {
+				margin: 0;
+			}
+			.name {
+				font-size:17px;
+				font-weight: 800;
+			}
+			.description {
+				font-size: 15px;
+			}
+		}
+		.form-group {
+			margin-bottom:0;
+		}
+		.btn-add {
+			border:1px solid #eea236;
+			&:hover, &:focus {
+				background:none;
+			}
+		}
+	}
+	.added-info {
+		display:table;
+		img {
+			display: table-cell;
+			max-height: 170px;
+			max-width: 70px;
+			margin-bottom:5px;
+		}
+		.added-text {
+			vertical-align: top;
+			display: table-cell;
+			padding:0 0 0 10px;
+			p.title {
+				font-weight: 600;
+				font-size: 14px;
+				margin:0;
+			}
+			.wrong-book {
+				display: block;
+				margin-top:5px;
+			}
+		}
+	}
+
+	p.title {
+		font-weight: 800;
+		font-size: 17px;
+		margin:0;
+	}
+	p.author {
+		font-weight: 500;
+		color:#666;
+		margin:0;
+	}
+	p.categories {
+		margin:5px 0 0 0;
+	}
+	.panel:last-of-type {
+		margin-bottom: 0;
+	}
+}

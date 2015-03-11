@@ -1,0 +1,51 @@
+<div class="panel panel-default">
+	<div class="panel-body book-input">
+		<%= f.label :title, "Book Title <small>(or other reading medium)</small>".html_safe, class: "sr-only" %>
+
+		<div class="input-group <%= "has-error has-feedback" if f.object.errors.full_messages_for(:title).present? %>">
+			<% errors = f.object.errors.full_messages_for(:title) %>
+			<%= f.text_field :title, class: "form-control list-item-title", placeholder: "Book Title (or other reading medium)" %>
+			<span class="input-group-addon"><a href="#" class="remove_fields">Remove</a></span>
+		</div>
+		<% if f.object.errors.full_messages_for(:title).present? %>
+			<span class="error-explanation">
+		    <%= f.object.errors.full_messages_for(:title).first %>
+		  </span>
+		<% end %>
+
+		<%= f.hidden_field :_destroy, class: "destroy-field" %>
+		<div class="form-group <%= "has-error has-feedback" if f.object.errors.full_messages_for(:author).present? %>">
+			<% if (f.object.title.present? &&  !f.object.website.present?) or f.object.errors.full_messages_for(:author).present? %>
+				<%= f.text_field :author, class: "form-control hidden-author", placeholder: "Author" %>
+			<% else %>
+				<%= f.hidden_field :author, class: "form-control hidden-author", placeholder: "Author" %>
+			<% end %>
+		</div>
+		<% if f.object.errors.full_messages_for(:author).present? %>
+			<span class="error-explanation">
+		    <%= f.object.errors.full_messages_for(:author).first %>
+		  </span>
+		<% end %>
+
+		<%= f.hidden_field :isbn, class: "hidden-isbn" %>
+		<%= f.hidden_field :is_ebook, class: "hidden-is-ebook" %>
+		<%= f.hidden_field :website, class: "hidden-website" %>
+		<%= f.hidden_field :image_link, class: "hidden-image-link" %>
+		<%= f.hidden_field :categories, class: "hidden-categories" %>
+
+		<div class="added-info top-m-10">
+			<% if f.object.title.present? &&  f.object.website.present? %>
+				<% item = f.object %>
+				<%= image_tag item.image_link %>
+				<div class="added-text">
+					<p class="title"><%= item.title %></p>
+					<p class="author">by <%= item.author %></p>
+					<% if item.categories.present? %>
+						<p class="categories">Categories: <%= item.categories %></p>
+					<% end %>
+					<a href="#" class="wrong_book">Not what you're looking for?</a>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>

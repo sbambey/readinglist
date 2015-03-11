@@ -1,0 +1,20 @@
+<h2>Log in</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= render "shared/text_field", f: f, attribute: :email, args: { placeholder: "Email", label_class: "control-label" } %>
+
+  <%= render "devise/shared/password_field", f: f, args: {} %>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="checkbox">
+      <label>
+        <%= f.check_box :remember_me %>
+        Remember me?
+      </label>
+    </div>
+  <% end -%>
+
+  <%= f.submit "Log in", class: "btn btn-default btn-green" %>
+
+  <p class="form-p">Haven't signed up yet? Create an account <%= link_to "here", new_user_registration_path %>.</p>
+<% end %>

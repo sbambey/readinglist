@@ -1,0 +1,145 @@
+<ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01">
+<OperationRequest>
+<HTTPHeaders>
+<Header Name="UserAgent" Value="Jeff/1.2.0 (Language=Ruby; Simons-MacBook-Pro-2.local)"/>
+</HTTPHeaders>
+<RequestId>0e670671-0a0d-43ac-8158-695511335a00</RequestId>
+<Arguments>
+<Argument Name="AWSAccessKeyId" Value="AKIAIWO3OEDYYTGZ5HOQ"/>
+<Argument Name="AssociateTag" Value="readinglist09-20"/>
+<Argument Name="IdType" Value="ISBN"/>
+<Argument Name="ItemId" Value="9780313364587"/>
+<Argument Name="Operation" Value="ItemLookup"/>
+<Argument Name="ResponseGroup" Value="ItemAttributes"/>
+<Argument Name="SearchIndex" Value="Books"/>
+<Argument Name="Service" Value="AWSECommerceService"/>
+<Argument Name="Signature" Value="8O+Rbg37hJdo25K9idWBQqPcf1pUibkli4l5oIa2hUA="/>
+<Argument Name="SignatureMethod" Value="HmacSHA256"/>
+<Argument Name="SignatureVersion" Value="2"/>
+<Argument Name="Timestamp" Value="2015-03-07T21:41:12Z"/>
+<Argument Name="Version" Value="2011-08-01"/>
+</Arguments>
+<RequestProcessingTime>0.0261510000000000</RequestProcessingTime>
+</OperationRequest>
+<Items>
+<Request>
+<IsValid>True</IsValid>
+<ItemLookupRequest>
+<IdType>ISBN</IdType>
+<ItemId>9780313364587</ItemId>
+<ResponseGroup>ItemAttributes</ResponseGroup>
+<SearchIndex>Books</SearchIndex>
+<VariationPage>All</VariationPage>
+</ItemLookupRequest>
+</Request>
+<Item>
+<ASIN>0313364583</ASIN>
+<DetailPageURL>
+http://www.amazon.com/Starbucks-Corporations-That-Changed-World/dp/0313364583%3FSubscriptionId%3DAKIAIWO3OEDYYTGZ5HOQ%26tag%3Dreadinglist09-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0313364583
+</DetailPageURL>
+<ItemLinks>
+<ItemLink>
+<Description>Technical Details</Description>
+<URL>
+http://www.amazon.com/Starbucks-Corporations-That-Changed-World/dp/tech-data/0313364583%3FSubscriptionId%3DAKIAIWO3OEDYYTGZ5HOQ%26tag%3Dreadinglist09-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0313364583
+</URL>
+</ItemLink>
+<ItemLink>
+<Description>Add To Baby Registry</Description>
+<URL>
+http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3D0313364583%26SubscriptionId%3DAKIAIWO3OEDYYTGZ5HOQ%26tag%3Dreadinglist09-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0313364583
+</URL>
+</ItemLink>
+<ItemLink>
+<Description>Add To Wedding Registry</Description>
+<URL>
+http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3D0313364583%26SubscriptionId%3DAKIAIWO3OEDYYTGZ5HOQ%26tag%3Dreadinglist09-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0313364583
+</URL>
+</ItemLink>
+<ItemLink>
+<Description>Add To Wishlist</Description>
+<URL>
+http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3D0313364583%26SubscriptionId%3DAKIAIWO3OEDYYTGZ5HOQ%26tag%3Dreadinglist09-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0313364583
+</URL>
+</ItemLink>
+<ItemLink>
+<Description>Tell A Friend</Description>
+<URL>
+http://www.amazon.com/gp/pdp/taf/0313364583%3FSubscriptionId%3DAKIAIWO3OEDYYTGZ5HOQ%26tag%3Dreadinglist09-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0313364583
+</URL>
+</ItemLink>
+<ItemLink>
+<Description>All Customer Reviews</Description>
+<URL>
+http://www.amazon.com/review/product/0313364583%3FSubscriptionId%3DAKIAIWO3OEDYYTGZ5HOQ%26tag%3Dreadinglist09-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0313364583
+</URL>
+</ItemLink>
+<ItemLink>
+<Description>All Offers</Description>
+<URL>
+http://www.amazon.com/gp/offer-listing/0313364583%3FSubscriptionId%3DAKIAIWO3OEDYYTGZ5HOQ%26tag%3Dreadinglist09-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0313364583
+</URL>
+</ItemLink>
+</ItemLinks>
+<ItemAttributes>
+<Author>Marie Bussing-Burks</Author>
+<Binding>Hardcover</Binding>
+<Brand>Brand: Greenwood</Brand>
+<EAN>9780313364587</EAN>
+<EANList>
+<EANListElement>9780313364587</EANListElement>
+</EANList>
+<Feature>Used Book in Good Condition</Feature>
+<ISBN>0313364583</ISBN>
+<IsEligibleForTradeIn>1</IsEligibleForTradeIn>
+<ItemDimensions>
+<Height Units="hundredths-inches">925</Height>
+<Length Units="hundredths-inches">75</Length>
+<Weight Units="hundredths-pounds">85</Weight>
+<Width Units="hundredths-inches">625</Width>
+</ItemDimensions>
+<Label>Greenwood</Label>
+<Languages>
+<Language>
+<Name>English</Name>
+<Type>Unknown</Type>
+</Language>
+<Language>
+<Name>English</Name>
+<Type>Original Language</Type>
+</Language>
+<Language>
+<Name>English</Name>
+<Type>Published</Type>
+</Language>
+</Languages>
+<ListPrice>
+<Amount>5000</Amount>
+<CurrencyCode>USD</CurrencyCode>
+<FormattedPrice>$50.00</FormattedPrice>
+</ListPrice>
+<Manufacturer>Greenwood</Manufacturer>
+<NumberOfItems>1</NumberOfItems>
+<NumberOfPages>154</NumberOfPages>
+<PackageDimensions>
+<Height Units="hundredths-inches">80</Height>
+<Length Units="hundredths-inches">920</Length>
+<Weight Units="hundredths-pounds">85</Weight>
+<Width Units="hundredths-inches">630</Width>
+</PackageDimensions>
+<PackageQuantity>1</PackageQuantity>
+<ProductGroup>Book</ProductGroup>
+<ProductTypeName>ABIS_BOOK</ProductTypeName>
+<PublicationDate>2009-10-13</PublicationDate>
+<Publisher>Greenwood</Publisher>
+<Studio>Greenwood</Studio>
+<Title>Starbucks (Corporations That Changed the World)</Title>
+<TradeInValue>
+<Amount>200</Amount>
+<CurrencyCode>USD</CurrencyCode>
+<FormattedPrice>$2.00</FormattedPrice>
+</TradeInValue>
+</ItemAttributes>
+</Item>
+</Items>
+</ItemLookupResponse>

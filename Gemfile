@@ -10,7 +10,14 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
+gem 'googlebooks'
 gem 'vacuum'
+gem 'devise'
+gem 'friendly_id', '~> 5.1.0'
+gem 'pg_search'
+gem 'will_paginate', '~> 3.0.6'
+gem 'will_paginate-bootstrap'
+gem 'sitemap_generator'
 
 group :development, :test do
   gem 'byebug'
@@ -33,6 +40,7 @@ group :test do
   gem 'capybara'
   gem 'shoulda-matchers', require: false
   gem 'fuubar'
+  gem 'webmock'
 end
 
 group :production do

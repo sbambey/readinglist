@@ -1,0 +1,15 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+  <%= render "shared/text_field", f: f, attribute: :email, args: { placeholder: "Email", label_class: "control-label" } %>
+
+  <%= render "shared/text_field", f: f, attribute: :username, args: { placeholder: "Username", label_class: "control-label" } %>
+
+  <%= render "devise/shared/password_field", f: f, args: {} %>
+
+  <%= render "devise/shared/password_confirmation_field", f: f, args: {} %>
+
+  <%= f.submit "Sign up", class: "btn btn-default btn-green btn-bottom" %>
+  
+<% end %>
