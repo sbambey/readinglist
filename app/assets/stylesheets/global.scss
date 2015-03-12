@@ -34,6 +34,11 @@ button:hover
 	}
 	.logo-bottom {
 		font-size: 14px;
+		color: #777;
+		&:hover, &:focus {
+			color: #777;
+			text-decoration: none;
+		}
 	}
 }
 .navbar-wrapper {
