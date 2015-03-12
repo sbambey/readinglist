@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="col-xs-12 col-md-10 col-md-offset-1 navbar-wrapper">
+  <div class="col-xs-12 col-md-8 col-md-offset-2 navbar-wrapper">
     <nav class="navbar navbar-default" style="border-radius:none !important; -webkit-border-radius: 0 !important; -moz-border-radius: 0 !important;">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -19,7 +19,7 @@
         <ul class="nav navbar-nav">
           <% if user_signed_in? %>
             <li<%= active_link("lists", "index") %>><%= link_to "Discover", root_path %></li>
-            <li<%= active_link("users", "show") %>><%= link_to "My Lists", user_path(current_user) %></a></li>
+            <li<%= active_link("users", "show") %>><%= link_to "My lists", user_path(current_user) %></a></li>
             <li<%= active_link("lists", "new") %>><%= link_to "Create list", new_list_path %></a></li>
           <% else %>
             <li<%= active_link("lists", "index") %>><%= link_to "Discover", root_path %></li>

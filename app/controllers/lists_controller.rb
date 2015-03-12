@@ -5,7 +5,7 @@ class ListsController < ApplicationController
 
 	def index
 		@lists = List.search(params[:search]).paginate(per_page: 10, page: params[:page])
-		#@matched = JSON.pretty_generate(GoogleBooksService.new({title: "Test", ip: request.remote_ip}).search)
+		@matched = JSON.pretty_generate(AmazonBooksService.new({isbn: 9781455520039}).search)
 	end
 
 	def show
