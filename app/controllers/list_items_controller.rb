@@ -1,5 +1,7 @@
 class ListItemsController < ApplicationController
 	before_action :authenticate_user!
+
+	require 'json'
 	
 	def retrieve_google_book
 
@@ -16,7 +18,7 @@ class ListItemsController < ApplicationController
 	# Fulltext search Google Books API to get title, ISBN and more
 	def retrieve_book_info(title)
 		googlebooks_item = book_from_title(title)
-
+		
 		item = {}
 		item["title"] = googlebooks_item.title
 		item["author"] = googlebooks_item.authors
