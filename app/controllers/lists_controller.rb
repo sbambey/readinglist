@@ -1,7 +1,7 @@
 class ListsController < ApplicationController
 	before_action :authenticate_user!, except: [:index, :show]
 
-	#require 'json'
+	require 'json'
 
 	def index
 		@lists = List.search(params[:search]).paginate(per_page: 10, page: params[:page])

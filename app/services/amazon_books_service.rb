@@ -5,7 +5,7 @@ class AmazonBooksService
 	end
 
 	def search
-		result = item_lookup.to_h["ItemLookupResponse"]["Items"]["Item"]
+		result = item_lookup.to_h
 		if result.kind_of?(Array)
 			result
 		elsif result.nil?
