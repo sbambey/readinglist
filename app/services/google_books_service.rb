@@ -15,6 +15,6 @@ class GoogleBooksService
 	end
 
 	def item_lookup
-		service.search(@title, {count: 1}).first
+		service.search(@title, {count: 1}, api_key: ENV["GOOGLE_API_KEY"]).first
 	end
 end
