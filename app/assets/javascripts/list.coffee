@@ -13,7 +13,7 @@ $(document).on 'click', '.add_fields', (event) ->
 
 $(document).on 'click', '.remove_fields', (event) ->
   if $(".list-body").find(".destroy-field[value!=1]").length > 1
-    $(this).parent().parent().find(".destroy-field").val('1')
+    $(this).parent().parent().parent().find(".destroy-field").val('1')
     $(this).closest('.book-input').parent().hide()
   event.preventDefault()
 
