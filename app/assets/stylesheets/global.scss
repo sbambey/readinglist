@@ -19,15 +19,35 @@ button:hover
   color: $state-danger-text;
 }
 
+.navbar-brand {
+	padding:5px 25px 0 5px;
+	.logo-top {
+		display:block;
+		font-size: 30px;
+		line-height: 25px;
+		color: $logo;
+		font-weight:900;
+		&:hover, &:focus {
+			color: $logo;
+			text-decoration:none;
+		}
+	}
+	.logo-bottom {
+		font-size: 14px;
+	}
+}
 .navbar-wrapper {
-	border:$border-width solid $central-border;
 	padding:0;
 	margin-bottom: 20px;
 }
 .navbar-default {
 	background-color: $central-bg;
-	border:none;
+	border:$border-width solid $central-border;
+	.dropdown-backdrop {
+    position: static;
+	}
 }
+
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
