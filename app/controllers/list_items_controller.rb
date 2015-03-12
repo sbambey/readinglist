@@ -31,7 +31,8 @@ class ListItemsController < ApplicationController
 
 	def book_from_title(title)
 		GoogleBooksService.new({
-			title: title
+			title: title,
+			ip: request.remote_ip
 		}).search
 	end
 end

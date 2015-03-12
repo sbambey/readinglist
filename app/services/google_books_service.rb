@@ -2,6 +2,7 @@ class GoogleBooksService
 
 	def initialize(params)
 		@title = params[:title]
+		@ip = params[:ip]
 	end
 
 	def search
@@ -15,6 +16,6 @@ class GoogleBooksService
 	end
 
 	def item_lookup
-		service.search(@title, {count: 1}, api_key: ENV["GOOGLE_API_KEY"]).first
+		service.search(@title, {count: 1, api_key: ENV["GOOGLE_API_KEY"]}, @ip).first
 	end
 end
