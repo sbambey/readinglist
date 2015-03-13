@@ -1,5 +1,5 @@
 <div class="list-body">
-	<p class="lead">Browse @<%= @user.username %>'s lists</p>
+	<p class="lead">Browse @<%= @user.username %>'s lists<%= render "shared/google_attribution" %></p>
 	<% @user.lists.each do |list| %>
 		<%= render "shared/list_panel", list: list %>
 	<% end %>

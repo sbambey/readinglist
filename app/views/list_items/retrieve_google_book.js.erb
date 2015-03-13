@@ -1,15 +1,20 @@
 $(".list-body").find("input").each(function() {
-	if($(this).val() == "<%= @title %>") {
-		var added_info = $(this).parent().parent().find("div.added-info").first()
+	if($(this).attr("id") == "<%= @field_id %>") {
+		var added_info = $(this).parent().parent().find("div.added-info")
+		$(this).parent().parent().find(".error-quota").remove()
 		added_info.empty()
-		added_info.append('<%=j render("book_info") %>')
+		<% if @throttled %>
+			added_info.before('<span class="error-explanation error-quota">Oops! There was an error. Most likely you\'ve reached our lookup quota. Try again in a little while.</span>')
+		<% else %>
+			added_info.append('<%=j render("book_info") %>')
 
-		var hidden_field_wrapper = $(this).parent().parent()
-		hidden_field_wrapper.find("input.hidden-author").first().val('<%= @book["author"].to_s.html_safe %>')
-		hidden_field_wrapper.find("input.hidden-isbn").first().val("<%= @book['isbn'].to_s.html_safe %>")
-		hidden_field_wrapper.find("input.hidden-is-ebook").first().val("<%= @book['is_ebook'].to_s.html_safe %>")
-		hidden_field_wrapper.find("input.hidden-website").first().val("<%= @book['website'].to_s.html_safe %>")
-		hidden_field_wrapper.find("input.hidden-image-link").first().val("<%= @book['image_link'].to_s.html_safe %>")
-		hidden_field_wrapper.find("input.hidden-categories").first().val("<%= @book['categories'].to_s.html_safe %>")
+			var hidden_field_wrapper = $(this).parent().parent()
+			hidden_field_wrapper.find("input.hidden-author").first().val('<%= @book["author"].to_s.html_safe %>')
+			hidden_field_wrapper.find("input.hidden-isbn").first().val("<%= @book['isbn'].to_s.html_safe %>")
+			hidden_field_wrapper.find("input.hidden-is-ebook").first().val("<%= @book['is_ebook'].to_s.html_safe %>")
+			hidden_field_wrapper.find("input.hidden-website").first().val("<%= @book['website'].to_s.html_safe %>")
+			hidden_field_wrapper.find("input.hidden-image-link").first().val("<%= @book['image_link'].to_s.html_safe %>")
+			hidden_field_wrapper.find("input.hidden-categories").first().val("<%= @book['categories'].to_s.html_safe %>")	
+		<% end %>
 	}
 });

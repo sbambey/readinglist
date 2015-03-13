@@ -11,7 +11,10 @@
 <%= render "layouts/flash_messages", modified: true %>
 
 <div class="list-body">
-	<p class="lead">Time to add some awesome books</p>
+	<p class="lead">
+		Time to add some awesome books
+		<%= render "shared/google_attribution" %>
+	</p>
 	
 	<%= f.fields_for :list_items do |builder| %>
 		<%= render "list_item_fields", f: builder %>

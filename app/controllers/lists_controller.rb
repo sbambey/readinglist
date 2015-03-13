@@ -22,7 +22,7 @@ class ListsController < ApplicationController
 		create_params[:unique_identifier] = create_unique_identifier
 		@list = current_user.lists.new(create_params)
 
-		prepare_items_using_amazon(@list.list_items)
+		#prepare_items_using_amazon(@list.list_items)
 
 		if @list.save
 			flash[:success] = "List was successfully created."

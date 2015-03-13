@@ -1,6 +1,6 @@
 <div class="row list-heading">
 	<div class="col-xs-12">
-		<h2><%= @list.name %></h2>
+		<h2><%= @list.name %><%= render "shared/google_attribution" %></h2>
 		<p class="lead"><em><%= @list.description %></em></p>
 		by <%= link_to "@#{@list.user.username}", user_path(@list.user) %>
 	</div>

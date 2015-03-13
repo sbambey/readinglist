@@ -101,7 +101,7 @@ button:hover
 }
 
 .footer {
-	padding: 10px 20px;
+	padding: 10px 10px;
 	p {
 		margin:0;
 	}
@@ -113,6 +113,9 @@ button:hover
 
 
 /* General */
+.powered-by {
+	float: right;
+}
 .top-m-10 {
 	margin-top:10px;
 }

@@ -1,9 +1,20 @@
 ready = ->
 
-$(document).on 'blur', '.list-item-title', (event) ->
-  $(this).parent().removeClass("has-error has-feedback")
-  $(this).parent().parent().find(".error-explanation").remove()
-  $.get '/list_items/retrieve_google_book/' + $(this).val()
+delay = do ->
+  timer = 0
+  (callback, ms) ->
+    clearTimeout timer
+    timer = setTimeout(callback, ms)
+    return
+
+$(document).on 'keyup', '.list-item-title', (event) ->
+  val = $(this).val()
+  id = $(this).attr("id")
+  delay (->
+    $.get '/list_items/retrieve_google_book/' + encodeURIComponent(val) + '/' + encodeURIComponent(id)
+    return
+  ), 2000
+  return
 
 $(document).on 'click', '.add_fields', (event) ->
   time = new Date().getTime()

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :lists, except: [:destroy]
 
-  get "list_items/retrieve_google_book/:title", to: "list_items#retrieve_google_book"
+  get "list_items/retrieve_google_book/:title/:field_id", to: "list_items#retrieve_google_book"
 
   root to: "lists#index"
 end

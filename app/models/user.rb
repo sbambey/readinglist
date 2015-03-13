@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :lists
+  has_many :book_requests, dependent: :destroy
 
   validates :username, presence: true, length: { minimum: 3, maximum: 20 }, uniqueness: true
 

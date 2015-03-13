@@ -1,12 +1,18 @@
 class ListItemsController < ApplicationController
 	before_action :authenticate_user!
 
-	require 'json'
+	#require 'json'
 	
 	def retrieve_google_book
-
 		@title = params[:title]
-		@book = retrieve_book_info(params[:title])
+		@field_id = params[:field_id]
+
+		@throttled = BookRequest.throttled?(current_user)
+
+		if !@throttled
+			@book = retrieve_book_info(@title)
+			BookRequest.create(user: current_user)
+		end
 
 		respond_to do |format|
       format.js
