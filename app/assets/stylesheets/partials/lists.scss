@@ -34,12 +34,6 @@
 			padding:0;
 			border:none;
 		}
-		#index-google-attribution {
-			margin-top:10px;
-			.powered-by {
-				float: none;
-			}
-		}
 	}
 
 	.list-body {
@@ -80,6 +74,9 @@
 		}
 		.form-group {
 			margin-bottom:0;
+		}
+		.feedback-loading {
+			margin-right: 80px;
 		}
 		.btn-add {
 			border:1px solid #eea236;

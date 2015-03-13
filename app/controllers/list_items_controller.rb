@@ -25,14 +25,18 @@ class ListItemsController < ApplicationController
 	def retrieve_book_info(title)
 		googlebooks_item = book_from_title(title)
 		
-		item = {}
-		item["title"] = googlebooks_item.title
-		item["author"] = googlebooks_item.authors
-		item["is_ebook"] = googlebooks_item.sale_info["isEbook"]
-		item["isbn"] = googlebooks_item.isbn
-		item["website"] = googlebooks_item.info_link
-		item["categories"] = googlebooks_item.categories
-		item["image_link"] = googlebooks_item.image_link(zoom: 5)
+		if googlebooks_item.present?
+			item = {}
+			item["title"] = googlebooks_item.title
+			item["author"] = googlebooks_item.authors
+			item["is_ebook"] = googlebooks_item.sale_info["isEbook"]
+			item["isbn"] = googlebooks_item.isbn
+			item["website"] = googlebooks_item.info_link
+			item["categories"] = googlebooks_item.categories
+			item["image_link"] = googlebooks_item.image_link(zoom: 5)
+		else
+			item = nil
+		end
 
 		return item
 	end

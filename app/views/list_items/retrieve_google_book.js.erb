@@ -1,10 +1,12 @@
 $(".list-body").find("input").each(function() {
 	if($(this).attr("id") == "<%= @field_id %>") {
 		var added_info = $(this).parent().parent().find("div.added-info")
-		$(this).parent().parent().find(".error-quota").remove()
+		$(this).parent().parent().find(".custom-error").remove()
 		added_info.empty()
 		<% if @throttled %>
-			added_info.before('<span class="error-explanation error-quota">Oops! There was an error. Most likely you\'ve reached our lookup quota. Try again in a little while.</span>')
+			added_info.before('<span class="error-explanation custom-error">Oops! There was an error. Most likely you\'ve reached our lookup quota. Try again in a little while.</span>')
+		<% elsif !@book.present? %>
+			added_info.before('<span class="error-explanation custom-error">We were not able to find what you\'re looking for. Search again or <a href="#" class="wrong_book">add the book manually</a>.</span>')
 		<% else %>
 			added_info.append('<%=j render("book_info") %>')
 

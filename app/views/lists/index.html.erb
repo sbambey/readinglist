@@ -1,6 +1,6 @@
 <div class="row list-heading">
 	<div class="col-xs-12">
-		<h2 class="text-center">Browse Reading Lists</h2>
+		<h2 class="text-center">Browse Reading Lists<%= render "shared/google_attribution" %></h2>
 		<%= form_tag lists_path, method: :get do %>
 			<div class="input-group">
 				<%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Search lists",
@@ -9,7 +9,6 @@
 			</div>
 		<% end %>
 		<p class="lower-lead lead text-center">Searching a total of <%= number_to_human(List.count) %> lists</p>
-		<div id="index-google-attribution" class="text-center"><%= render "shared/google_attribution" %></div>
 	</div>
 </div>
 

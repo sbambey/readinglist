@@ -19,6 +19,7 @@ gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
 gem 'sitemap_generator'
 gem 'underscore-rails'
+gem 'font-awesome-sass', '~> 4.3.0'
 
 group :development, :test do
   gem 'byebug'
