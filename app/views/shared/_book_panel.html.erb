@@ -3,7 +3,13 @@
 		<div class="added-info">
 			<%= render "list_item_image", item: item %>
 			<div class="added-text">
-				<p class="title"><%= link_to item.title, item.website %></p>
+				<p class="title">
+					<% if item.website.present? %>
+						<%= link_to item.title, item.website, target: "_blank" %>
+					<% else %>
+						<%= item.title %>
+					<% end %>
+				</p>
 				<p class="author"><%= item.author.present? ? "by #{item.author}" : "Author unavailable" %></p>
 				<p class="categories"> <%= "Categories: #{item.categories.html_safe}" if item.categories.present? %></p>
 			</div>
