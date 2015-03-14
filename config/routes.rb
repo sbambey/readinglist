@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   resources :lists, path: '', only: [:show], as: "single_list"
 
+  get "channel.html", to: "static_pages#channel"
+
   #get ":id", to: "lists#show"
 
   root to: "lists#index"

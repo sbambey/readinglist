@@ -10,9 +10,23 @@
 <%= render "layouts/flash_messages", modified: true %>
 
 <div class="list-body">
-	<% if @list.user == current_user %>
-		<%= link_to "Edit List", edit_list_path(@list), class: "btn btn-default btn-green btn-top" %>
-	<% end %>
+	<div class="share-wrapper">
+		<div class="social">
+			<% if @list.user == current_user %>
+				<%= link_to "Edit List", edit_list_path(@list), class: "btn btn-default btn-green" %>
+			<% end %>
+
+			<span class="facebook">
+				<div class="fb-share-button" data-href="<%= @url %>" data-layout="button_count"></div>
+			</span>
+
+			<span class="twitter">
+				<div class="twitter-widget">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-via="toukanco">Tweet</a>
+				</div>
+			</span>
+		</div>
+	</div>
 	<% @list.list_items.each do |item| %>
 		<%= render "shared/book_panel", item: item %>
 	<% end %>

@@ -8,6 +8,8 @@
 </head>
 <body class="<%= controller.controller_name %>">
 
+	<%= render "layouts/social_js_snippet" %>
+
 	<% if Rails.env.production? %>
   	<%= render "layouts/google_analytics_snippet" %>
   <% end %>

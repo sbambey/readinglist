@@ -10,6 +10,7 @@ class ListsController < ApplicationController
 
 	def show
 		@list = List.friendly.find(params[:id])
+		@url = request.original_url
 	end
 
 	def new

@@ -41,13 +41,37 @@
 		p {
 			margin: 10px 0;
 		}
+		.social {
+			vertical-align: middle;
+			display:inline-block;
+			font-size: 1px;
+			margin-bottom: 20px;
+			.btn {
+				margin-right: 20px;
+			}
+		}
+		.social span {
+			display: inline-block;
+			width: 100px;
+		}
+		.social iframe,.social>span {
+			vertical-align: middle;
+		}
+		/*.fb-share-button {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		#twitter-widget-0 {
+			display: table-cell;
+			vertical-align: middle;
+		}*/
 		.book-input {
 			&:nth-of-type(n+2) {
 				margin-top: 10px;
 			}
 		}
 		.hidden-author[type=text] {
-			margin-top: 10px;
+			margin-bottom: 10px;
 		}
 
 		.panel-default {
