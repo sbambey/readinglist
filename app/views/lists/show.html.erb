@@ -1,4 +1,4 @@
-<% provide(:title, @list.name) %>
+<% provide(:title, @list.name.html_safe) %>
 <div class="row list-heading">
 	<div class="col-xs-12">
 		<h2><%= @list.name %><%= render "shared/google_attribution" %></h2>
