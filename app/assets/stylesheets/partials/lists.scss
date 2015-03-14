@@ -56,6 +56,9 @@
 		.panel-body {
 			background-color: #fafafa;
 			padding-bottom:5px;
+			div:last-of-type {
+				margin-bottom:10px;
+			}
 		}
 		.search-index-image {
 			max-height:70px;
@@ -87,11 +90,12 @@
 	}
 	.added-info {
 		display:table;
+		margin-top: 10px;
 		img {
 			display: table-cell;
 			max-height: 170px;
 			max-width: 70px;
-			margin-bottom:5px;
+			margin-bottom:10px;
 		}
 		.added-text {
 			vertical-align: top;
@@ -119,7 +123,7 @@
 		color:#666;
 		margin:0;
 	}
-	p.categories {
+	p.other {
 		margin:5px 0 0 0;
 	}
 	.panel:last-of-type {

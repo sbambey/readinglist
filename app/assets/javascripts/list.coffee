@@ -41,11 +41,16 @@ $(document).on 'keyup', '.list-item-title', (event) ->
     delay (->
       add_class(parent)
       return
-    ), 600
+    ), 500
 
     delay_ (->
       parent.find(".list-item-title").blur()
-      $.get '/list_items/retrieve_google_book/' + encodeURIComponent(val) + '/' + encodeURIComponent(id), async: false
+      parent.removeClass("has-error has-feedback")
+      parent.parent().find(".error-explanation").remove()
+      $.ajax
+        url: '/list_items/retrieve_google_book/' + encodeURIComponent(val) + '/' + encodeURIComponent(id)
+        type: 'get'
+        async: false
       parent.find(".feedback-loading").remove()
       return
     ), 2000

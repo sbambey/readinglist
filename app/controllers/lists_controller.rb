@@ -49,7 +49,7 @@ class ListsController < ApplicationController
 	private
 
 	def list_params
-		params.require(:list).permit(:name, :description, list_items_attributes: [:id, :title, :author, :isbn, :is_ebook, :website, :image_link, :categories, :_destroy])
+		params.require(:list).permit(:name, :description, list_items_attributes: [:id, :title, :author, :isbn, :is_ebook, :website, :image_link, :categories, :personal_note, :_destroy])
 	end
 
 	# Lookup Books by ISBN on Amazon's Product Advertising API

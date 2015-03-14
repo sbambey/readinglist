@@ -33,7 +33,7 @@
 		<%= f.hidden_field :image_link, class: "hidden-image-link" %>
 		<%= f.hidden_field :categories, class: "hidden-categories" %>
 
-		<div class="added-info top-m-10">
+		<div class="added-info">
 			<% if f.object.title.present? &&  f.object.website.present? %>
 				<% item = f.object %>
 				<%= image_tag item.image_link %>
@@ -43,9 +43,13 @@
 					<% if item.categories.present? %>
 						<p class="categories">Categories: <%= item.categories %></p>
 					<% end %>
-					<a href="#" class="wrong_book">Not what you're looking for?</a>
+					Not what you're looking for? Search again above or <a href="#" class="wrong_book">add the book manually</a>.
 				</div>
 			<% end %>
+		</div>
+
+		<div class="form-group <%= "has-error has-feedback" if f.object.errors.full_messages_for(:personal_note).present? %>">
+			<%= f.text_area :personal_note, class: "form-control", placeholder: "Personal thoughts on this item. Why did you add it to this list? Why is it awesome? (optional)" %>
 		</div>
 	</div>
 </div>
