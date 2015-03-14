@@ -94,7 +94,7 @@ class ListsController < ApplicationController
 
 	def create_unique_identifier
 	  begin
-	    unique_identifier = SecureRandom.hex(5)
+	    unique_identifier = SecureRandom.hex(3)
 	  end while List.exists?(unique_identifier: unique_identifier)
 	  return unique_identifier
 	end
