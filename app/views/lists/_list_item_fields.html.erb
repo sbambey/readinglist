@@ -1,5 +1,5 @@
 <div class="panel panel-default">
-	<div class="panel-body book-input">
+	<div class="panel-body book-input new-edit">
 		<%= f.label :title, "Book Title <small>(or other reading medium)</small>".html_safe, class: "sr-only" %>
 
 		<div class="input-group <%= "has-error has-feedback" if f.object.errors.full_messages_for(:title).present? %>">
@@ -41,7 +41,7 @@
 					<p class="title"><%= item.title %></p>
 					<p class="author">by <%= item.author %></p>
 					<% if item.categories.present? %>
-						<p class="categories">Categories: <%= item.categories %></p>
+						<p class="categories"><u>Categories</u>: <%= item.categories %></p>
 					<% end %>
 					Not what you're looking for? Search again above or <a href="#" class="wrong_book">add the book manually</a>.
 				</div>

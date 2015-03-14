@@ -11,7 +11,7 @@
 		}
 		p.lead {
 			font-size: 17px;
-			margin-top:5px;
+			margin-top:0;
 		}
 		p.lower-lead {
 			font-size:15px;
@@ -88,24 +88,36 @@
 			}
 		}
 	}
+
+	.new-edit {
+		div:last-of-type {
+			margin-bottom: 0;
+		}
+		.added-info {
+			margin-top: 10px;
+			img {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
 	.added-info {
 		display:table;
-		margin-top: 10px;
+		
 		img {
 			display: table-cell;
 			max-height: 170px;
 			max-width: 70px;
-			margin-bottom:10px;
 		}
 		.added-text {
 			vertical-align: top;
 			display: table-cell;
 			padding:0 0 0 10px;
-			p.title {
+			/*p.title {
 				font-weight: 600;
 				font-size: 14px;
 				margin:0;
-			}
+			}*/
 			.wrong-book {
 				display: block;
 				margin-top:5px;
@@ -115,18 +127,18 @@
 
 	p.title {
 		font-weight: 800;
-		font-size: 17px;
+		font-size: 16px;
+		line-height: 17px;
 		margin:0;
 	}
 	p.author {
 		font-weight: 500;
 		color:#666;
+		font-size: 15px;
+		line-height: 16px;
 		margin:0;
 	}
 	p.other {
 		margin:5px 0 0 0;
-	}
-	.panel:last-of-type {
-		margin-bottom: 0;
 	}
 }

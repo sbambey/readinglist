@@ -3,7 +3,7 @@
 	<p class="title"><%= @book["title"] %></p>
 	<p class="author">by <%= @book["author"] %></p>
 	<% if @book["categories"].present? %>
-		<p class="categories">Categories: <%= @book["categories"] %></p>
+		<p class="categories"><u>Categories</u>: <%= @book["categories"] %></p>
 	<% end %>
 	Not what you're looking for? Search again above or <a href="#" class="wrong_book">add the book manually</a>.
 </div>

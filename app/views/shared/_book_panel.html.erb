@@ -11,8 +11,8 @@
 					<% end %>
 				</p>
 				<p class="author"><%= item.author.present? ? "by #{item.author}" : "Author unavailable" %></p>
-				<p class="other"> <%= "<u>Categories:</u> #{item.categories}".html_safe if item.categories.present? %></p>
-				<p class="other"> <%= "<u>Note from list creator:</u><br><em>\"#{item.personal_note}\"</em>".html_safe if item.personal_note.present? %></p>
+				<p class="other"> <%= "<u>Categories</u>: #{item.categories}".html_safe if item.categories.present? %></p>
+				<p class="other"> <%= "<u>Note from list creator</u>:<br><em>\"#{item.personal_note}\"</em>".html_safe if item.personal_note.present? %></p>
 			</div>
 		</div>
 	</div>
