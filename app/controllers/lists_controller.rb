@@ -26,7 +26,7 @@ class ListsController < ApplicationController
 
 		if @list.save
 			flash[:success] = "List was successfully created."
-			redirect_to @list
+			redirect_to single_list_path(@list)
 		else
 			render "new"
 		end
@@ -40,7 +40,7 @@ class ListsController < ApplicationController
 		@list = List.friendly.find(params[:id])
 		if @list.update_attributes(list_params)
 			flash[:success] = "Updated list successfully"
-			redirect_to list_path(@list)
+			redirect_to single_list_path(@list)
 		else
 			render "edit"
 		end

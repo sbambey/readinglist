@@ -36,7 +36,7 @@ RSpec.feature "List management", :type => :feature do
     list = create(:list)
     list_item = create(:list_item, list: list)
 
-    visit list_path(list)
+    visit single_list_path(list)
 
     within(".list-heading") do
       expect(page).to have_content(list.name)
