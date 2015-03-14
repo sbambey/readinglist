@@ -56,15 +56,7 @@
 		}
 		.social iframe,.social>span {
 			vertical-align: middle;
-		}
-		/*.fb-share-button {
-			display: table-cell;
-			vertical-align: middle;
-		}
-		#twitter-widget-0 {
-			display: table-cell;
-			vertical-align: middle;
-		}*/
+		}>
 		.book-input {
 			&:nth-of-type(n+2) {
 				margin-top: 10px;
@@ -112,13 +104,14 @@
 			}
 		}
 	}
-
 	.new-edit {
 		div:last-of-type {
 			margin-bottom: 0;
 		}
+		.list-item-group {
+			margin-bottom: 10px;
+		}
 		.added-info {
-			margin-top: 10px;
 			img {
 				margin-bottom: 10px;
 			}
@@ -137,11 +130,6 @@
 			vertical-align: top;
 			display: table-cell;
 			padding:0 0 0 10px;
-			/*p.title {
-				font-weight: 600;
-				font-size: 14px;
-				margin:0;
-			}*/
 			.wrong-book {
 				display: block;
 				margin-top:5px;

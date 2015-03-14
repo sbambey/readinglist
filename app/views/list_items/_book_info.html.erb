@@ -1,7 +1,7 @@
 <%= image_tag @book["image_link"] %>
 <div class="added-text">
 	<p class="title"><%= @book["title"] %></p>
-	<p class="author">by <%= @book["author"] %></p>
+	<p class="author"><%= @book["author"].present? ? "by #{@book['author']}" : "Author unavailable" %></p>
 	<% if @book["categories"].present? %>
 		<p class="categories"><u>Categories</u>: <%= @book["categories"] %></p>
 	<% end %>

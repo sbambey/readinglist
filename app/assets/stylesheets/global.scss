@@ -104,9 +104,19 @@ button:hover
 }
 
 .footer {
-	padding: 10px 10px;
-	p {
+	padding: 0 15px;
+	span {
+		display:inline-block;
 		margin:0;
+		&.social-icons {
+			float: right;
+			.btn-social-icon {
+				margin: 7px 0 7px 10px;
+			}
+		}
+		&:nth-of-type(1) {
+			margin-top: 12px;
+		}
 	}
 	a {
 		margin-left:10px;

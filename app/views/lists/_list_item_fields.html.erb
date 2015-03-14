@@ -2,7 +2,7 @@
 	<div class="panel-body book-input new-edit">
 		<%= f.label :title, "Book Title <small>(or other reading medium)</small>".html_safe, class: "sr-only" %>
 
-		<div class="input-group <%= "has-error has-feedback" if f.object.errors.full_messages_for(:title).present? %>">
+		<div class="input-group list-item-group <%= "has-error has-feedback" if f.object.errors.full_messages_for(:title).present? %>">
 			<% errors = f.object.errors.full_messages_for(:title) %>
 			<%= f.text_field :title, class: "form-control list-item-title", placeholder: "Book Title (or other reading medium)" %>
 			<span class="input-group-addon"><a href="#" class="remove_fields">Remove</a></span>
