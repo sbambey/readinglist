@@ -1,4 +1,12 @@
 module ApplicationHelper
+	def full_title(title)
+		if title.present?
+			"Toukan | #{title}"
+		else
+			"Toukan"
+		end
+	end
+
 	def active_link(controller, action = nil)
 		if action
 			if(params[:controller] == controller && params[:action] == action)

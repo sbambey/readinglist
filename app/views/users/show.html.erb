@@ -1,3 +1,4 @@
+<% provide(:title, "My lists") %>
 <div class="list-body">
 	<p class="lead">Browse @<%= @user.username %>'s lists<%= render "shared/google_attribution" %></p>
 	<% if @user == current_user %>
