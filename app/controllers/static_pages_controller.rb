@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+	layout false, only: [:channel]
   def contact
   end
 
