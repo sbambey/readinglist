@@ -9,6 +9,7 @@ class CreateListItems < ActiveRecord::Migration
       t.text :image_link
       t.text :categories
       t.integer :list_id
+      t.text :personal_note
 
       t.timestamps null: false
     end

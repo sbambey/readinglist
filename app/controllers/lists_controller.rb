@@ -10,7 +10,7 @@ class ListsController < ApplicationController
 
 	def show
 		@list = List.friendly.find(params[:id])
-		@url = request.original_url
+		@url = "#{request.protocol}#{request.host}/#{@list.short_url.slug}"
 	end
 
 	def new
@@ -19,15 +19,17 @@ class ListsController < ApplicationController
 	end
 
 	def create
-		create_params = list_params
-		create_params[:unique_identifier] = create_unique_identifier
-		@list = current_user.lists.new(create_params)
+		#create_params = list_params
+		#create_params[:unique_identifier] = create_unique_identifier
+
+		@list = current_user.lists.new(list_params)
 
 		#prepare_items_using_amazon(@list.list_items)
 
 		if @list.save
+			ShortUrl.create(list: @list)
 			flash[:success] = "List was successfully created."
-			redirect_to single_list_path(@list)
+			redirect_to @list
 		else
 			render "new"
 		end
@@ -41,7 +43,7 @@ class ListsController < ApplicationController
 		@list = List.friendly.find(params[:id])
 		if @list.update_attributes(list_params)
 			flash[:success] = "Updated list successfully"
-			redirect_to single_list_path(@list)
+			redirect_to @list
 		else
 			render "edit"
 		end
@@ -91,12 +93,5 @@ class ListsController < ApplicationController
 		else
 			item
 		end
-	end
-
-	def create_unique_identifier
-	  begin
-	    unique_identifier = SecureRandom.hex(3)
-	  end while List.exists?(unique_identifier: unique_identifier)
-	  return unique_identifier
 	end
 end
