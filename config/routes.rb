@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-	#get "/sitemap.xml.gz" => "static_pages#sitemap"
+	get "/sitemap.xml.gz" => "static_pages#sitemap"
 
-  constraints(format: /[a-z]+(\.[a-z]+)?/) do
+  #constraints(format: /[a-z]+(\.[a-z]+)?/) do
     #resources :sitemaps, only: :show
-    get '/sitemap.:format' => 'static_pages#sitemap'
-  end
+  #  get '/sitemap.:format' => 'static_pages#sitemap'
+  #end
 
   get "contact", to: "static_pages#contact"
 

@@ -8,11 +8,11 @@ class StaticPagesController < ApplicationController
   end
 
   def sitemap
-  	require 'open-uri'
+  	#require 'open-uri'
 
-    respond_to do |format|
-      format.xml_gz { send_data open('https://s3-us-west-2.amazonaws.com/sitemap-toukan/sitemaps/sitemap.xml.gz') }
-    end
-  	#redirect_to "https://s3-us-west-2.amazonaws.com/sitemap-toukan/sitemaps/sitemap.xml.gz"
+    #respond_to do |format|
+    #  format.xml_gz { send_data open('https://s3-us-west-2.amazonaws.com/sitemap-toukan/sitemaps/sitemap.xml.gz') }
+    #end
+  	redirect_to "https://s3-us-west-2.amazonaws.com/sitemap-toukan/sitemaps/sitemap.xml.gz"
   end
 end
