@@ -4,6 +4,4 @@
 # User-agent: *
 # Disallow: /
 User-Agent: *
-Disallow: /admin_panel
-Disallow: /admin
 Sitemap: http://www.toukan.co/sitemap.xml.gz
