@@ -13,7 +13,7 @@ class List < ActiveRecord::Base
 	accepts_nested_attributes_for :list_items, allow_destroy: true
 
   validates :name, presence: true, length: { minimum: 3, maximum: 40 }
-  validates :description, presence: true, length: { minimum: 10, maximum: 100 }
+  #validates :description, presence: true, length: { minimum: 10, maximum: 100 }
 
 	def should_generate_new_friendly_id?
     name_changed?
