@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+	get "/sitemap.xml.gz" => "static_pages#sitemap"
+
   get "contact", to: "static_pages#contact"
 
   devise_for :users
