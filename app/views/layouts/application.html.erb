@@ -4,8 +4,11 @@
   <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= csrf_meta_tags %>
-  <meta name="google-site-verification" content="5cqkIsNGVT849oEnVDTCDBBcPkuNoIFi4MUiPMVx4b8" />
+  <% if current_page?(root_path) %>
+  	<meta name="google-site-verification" content="5cqkIsNGVT849oEnVDTCDBBcPkuNoIFi4MUiPMVx4b8" />
+  <% end %>
 </head>
 <body class="<%= controller.controller_name %>">
 
