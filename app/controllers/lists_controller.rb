@@ -1,5 +1,6 @@
 class ListsController < ApplicationController
 	before_action :authenticate_user!, except: [:index, :show]
+	before_action :redirect_unless_list_owner_or_admin, only: [:edit, :update]
 
 	#require 'json'
 
@@ -101,6 +102,12 @@ class ListsController < ApplicationController
 			value.join(", ")
 		else
 			value
+		end
+	end
+
+	def redirect_unless_list_owner_or_admin
+		unless current_user == List.friendly.find(params[:id]).user || current_user == User.where(email: "sbambey@gmail.com").first || current_user.try(:admin?)
+			redirect_to root_path
 		end
 	end
 end
