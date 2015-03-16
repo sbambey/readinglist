@@ -123,12 +123,13 @@
 		.external-book-links {
 			margin-top: 5px;
 			.get-a-copy {
+				background: none;
 				&:hover, &:focus {
-					text-decoration: none;
+					background: none;
 				}
 			}
 			.external-book-buttons {
-				display:none;
+				visibility:hidden;
 				.btn-book {
 					border-width: 1px;
 					margin-left: 5px;
