@@ -43,7 +43,7 @@
 		}
 		.social {
 			vertical-align: middle;
-			display:inline-block;
+			display:block;
 			font-size: 1px;
 			margin-bottom: 20px;
 			.btn {
@@ -53,6 +53,13 @@
 		.social span {
 			display: inline-block;
 			width: 100px;
+			&.share-url-text {
+				display: inline-block;
+				vertical-align: middle;
+				width: auto;
+				font-size: 15px;
+				margin-right:3px;
+			}
 		}
 		.social iframe,.social>span {
 			vertical-align: middle;
@@ -60,6 +67,15 @@
 		.book-input {
 			&:nth-of-type(n+2) {
 				margin-top: 10px;
+			}
+		}
+		.share-url-box {
+			display: inline-block;
+			vertical-align: middle;
+			max-width:210px;
+			&[disabled] {
+				cursor: auto;
+				background-color: #fff;
 			}
 		}
 		.hidden-author[type=text] {

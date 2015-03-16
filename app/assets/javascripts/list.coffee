@@ -80,5 +80,8 @@ $(document).on 'click', '.btn-create', (event) ->
     if $(this).parent().parent().find('.added-text .title').text().length
       $(this).val($(this).parent().parent().find('.added-text .title').text())
 
+$(document).on 'click', '.share-url-box', (event) ->
+  $(this).select()
+
 $(document).ready(ready)
 $(document).on('page:load', ready)

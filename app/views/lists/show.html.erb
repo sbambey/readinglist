@@ -27,7 +27,10 @@
 					data-url="<%= @url %>">Tweet</a>
 				</div>
 			</span>
+			<span class="share-url-text">Share link:</span><%= text_field_tag "slug", @url, class: "form-control share-url-box" %>
+
 		</div>
+
 	</div>
 	<% @list.list_items.each do |item| %>
 		<%= render "shared/book_panel", item: item %>
