@@ -122,10 +122,19 @@
 		}
 		.external-book-links {
 			margin-top: 5px;
-			.btn-book {
-				border-width: 1px;
-				margin-left: 5px;
+			.get-a-copy {
+				&:hover, &:focus {
+					text-decoration: none;
+				}
 			}
+			.external-book-buttons {
+				display:none;
+				.btn-book {
+					border-width: 1px;
+					margin-left: 5px;
+				}
+			}
+			
 		}
 	}
 	.new-edit {

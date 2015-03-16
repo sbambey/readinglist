@@ -83,5 +83,9 @@ $(document).on 'click', '.btn-create', (event) ->
 $(document).on 'click', '.share-url-box', (event) ->
   $(this).select()
 
+$(document).on 'click', '.get-a-copy', (event) ->
+  $(this).parent().find(".external-book-buttons").toggle()
+  event.preventDefault()
+
 $(document).ready(ready)
 $(document).on('page:load', ready)
