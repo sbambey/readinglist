@@ -106,7 +106,7 @@ class ListsController < ApplicationController
 	end
 
 	def redirect_unless_list_owner_or_admin
-		unless current_user == List.friendly.find(params[:id]).user || current_user == User.where(email: "sbambey@gmail.com").first || current_user.try(:admin?)
+		unless current_user == List.friendly.find(params[:id]).user || current_user.try(:admin?)
 			redirect_to root_path
 		end
 	end
