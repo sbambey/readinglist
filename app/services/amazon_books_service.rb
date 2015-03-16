@@ -19,7 +19,11 @@ class AmazonBooksService
 
 	def service
 		service = Vacuum.new
-		service.associate_tag = ENV["ASSOCIATE_TAG"]
+		service.configure(
+	    aws_access_key_id: ENV["AMAZON_ADVERTISING_ACCESS_KEY_ID"],
+	    aws_secret_access_key: ENV["AMAZON_ADVERTISING_SECRET_ACCESS_KEY"],
+	    associate_tag: ENV["ASSOCIATE_TAG"]
+		)
 		service
 	end
 

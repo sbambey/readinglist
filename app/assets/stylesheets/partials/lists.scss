@@ -114,10 +114,14 @@
 			margin-right: 80px;
 		}
 		.btn-add {
+			background:none;
 			border:2px solid #eea236;
 			&:hover, &:focus {
 				background:none;
 			}
+		}
+		.btn-amazon {
+			margin-top: 5px;
 		}
 	}
 	.new-edit {

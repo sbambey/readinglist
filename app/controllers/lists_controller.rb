@@ -24,7 +24,7 @@ class ListsController < ApplicationController
 
 		@list = current_user.lists.new(list_params)
 
-		#prepare_items_using_amazon(@list.list_items)
+		prepare_items_using_amazon(@list.list_items)
 
 		if @list.save
 			ShortUrl.create(list: @list)
@@ -41,7 +41,10 @@ class ListsController < ApplicationController
 
 	def update
 		@list = List.friendly.find(params[:id])
+
 		if @list.update_attributes(list_params)
+			prepare_items_using_amazon(@list.list_items.select { |item| item.amazon_link.nil? })
+			@list.save
 			flash[:success] = "Updated list successfully"
 			redirect_to @list
 		else
@@ -63,6 +66,7 @@ class ListsController < ApplicationController
 		end
 
 		amazon_books_by_isbns(isbns).each do |item|
+
 			if item["ItemAttributes"]["ISBN"].present? || item["ItemAttributes"]["EISBN"].present?
 				if item["ItemAttributes"]["ISBN"].present?
 					isbn = item["ItemAttributes"]["ISBN"]
@@ -73,9 +77,14 @@ class ListsController < ApplicationController
 				ean = item["ItemAttributes"]["EAN"]
 				if @list.list_items.select { |item| item.isbn == isbn or item.isbn == ean }.present?
 					mod_item = @list.list_items.select { |item| item.isbn == isbn or item.isbn == ean }.first
-					mod_item.website = stringify(item["DetailPageURL"])
-					mod_item.title = stringify(item["ItemAttributes"]["Title"])
-					mod_item.author = stringify(item["ItemAttributes"]["Author"])
+					if item["DetailPageURL"].present?
+						mod_item.amazon_link = item["DetailPageURL"]
+					else
+						mod_item.amazon_link = ""
+					end
+					#mod_item.website = stringify(item["DetailPageURL"])
+					#mod_item.title = stringify(item["ItemAttributes"]["Title"])
+					#mod_item.author = stringify(item["ItemAttributes"]["Author"])
 				end
 			end
 		end
@@ -87,11 +96,11 @@ class ListsController < ApplicationController
 		}).search
 	end
 
-	def stringify(item)
-		if item.kind_of?(Array)
-			item.join(", ")
+	def stringify(value)
+		if value.kind_of?(Array)
+			value.join(", ")
 		else
-			item
+			value
 		end
 	end
 end
