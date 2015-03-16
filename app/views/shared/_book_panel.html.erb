@@ -13,10 +13,12 @@
 				<p class="author"><%= item.author.present? ? "by #{item.author}" : "Author unavailable" %></p>
 				<p class="other"> <%= "<u>Categories</u>: #{item.categories}".html_safe if item.categories.present? %></p>
 				<p class="other"> <%= "<u>Note from list creator</u>:<br><em>\"#{item.personal_note}\"</em>".html_safe if item.personal_note.present? %></p>
-				<div class="external-book-links">Get a copy:
-					<%= link_to("Google", item.website, class: "btn btn-default btn-xs btn-add btn-book") if item.website.present? %>
-					<%= link_to("Amazon", item.amazon_link, class: "btn btn-default btn-xs btn-add btn-book") if item.amazon_link.present? %>
-				</div>
+				<% if item.website.present? || item.amazon_link.present? %>
+					<div class="external-book-links">Get a copy:
+						<%= link_to("Google", item.website, class: "btn btn-default btn-xs btn-add btn-book") if item.website.present? %>
+						<%= link_to("Amazon", item.amazon_link, class: "btn btn-default btn-xs btn-add btn-book") if item.amazon_link.present? %>
+					</div>
+				<% end %>
 			</div>
 		</div>
 	</div>
