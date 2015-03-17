@@ -16,7 +16,7 @@
 				<%= link_to "Edit list", edit_list_path(@list), class: "btn btn-default btn-green" %>
 			<% end %>
 
-			<!--<span class="facebook">
+			<span class="facebook">
 				<div class="fb-share-button" data-href="<%= @url %>" data-layout="button_count"></div>
 			</span>
 
@@ -26,7 +26,7 @@
 					data-text="Check out this awesome reading list I found: <%= @list.name %>" data-via="toukanco" 
 					data-url="<%= @url %>">Tweet</a>
 				</div>
-			</span>-->
+			</span>
 			<span class="share-url-text">Share link:</span><%= text_field_tag "slug", @url, class: "form-control share-url-box" %>
 
 		</div>
