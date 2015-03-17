@@ -124,11 +124,12 @@
 			margin-top: 5px;
 			.get-a-copy {
 				&:hover, &:focus {
+					background:none;
 					text-decoration: none;
 				}
 			}
 			.external-book-buttons {
-				display:none;
+				visibility: hidden;
 				.btn-book {
 					border-width: 1px;
 					margin-left: 5px;

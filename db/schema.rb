@@ -45,9 +45,9 @@ ActiveRecord::Schema.define(version: 20150316205453) do
     t.text     "image_link"
     t.text     "categories"
     t.integer  "list_id"
+    t.text     "personal_note"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.text     "personal_note"
     t.text     "amazon_link"
   end
 
@@ -55,14 +55,12 @@ ActiveRecord::Schema.define(version: 20150316205453) do
     t.text     "name"
     t.text     "description"
     t.integer  "user_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.string   "unique_identifier"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "slug"
   end
 
   add_index "lists", ["slug"], name: "index_lists_on_slug", unique: true, using: :btree
-  add_index "lists", ["unique_identifier"], name: "index_lists_on_unique_identifier", unique: true, using: :btree
 
   create_table "pg_search_documents", force: :cascade do |t|
     t.text     "content"
@@ -85,7 +83,6 @@ ActiveRecord::Schema.define(version: 20150316205453) do
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "username",               default: "", null: false
-    t.string   "token"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

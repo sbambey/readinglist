@@ -84,7 +84,12 @@ $(document).on 'click', '.share-url-box', (event) ->
   $(this).select()
 
 $(document).on 'click', '.get-a-copy', (event) ->
-  $(this).parent().find(".external-book-buttons").toggle()
+  wrapper = $(this).parent().find(".external-book-buttons")
+  if wrapper.css('visibility') == 'hidden'
+    wrapper.css 'visibility', 'visible'
+  else
+    wrapper.css 'visibility', 'hidden'
+  return
   event.preventDefault()
 
 $(document).ready(ready)
