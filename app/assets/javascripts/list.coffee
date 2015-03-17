@@ -89,7 +89,6 @@ $(document).on 'click', '.get-a-copy', (event) ->
     wrapper.css 'visibility', 'visible'
   else
     wrapper.css 'visibility', 'hidden'
-  return
   event.preventDefault()
 
 $(document).ready(ready)
