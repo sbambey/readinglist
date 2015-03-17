@@ -84,11 +84,7 @@ $(document).on 'click', '.share-url-box', (event) ->
   $(this).select()
 
 $(document).on 'click', '.get-a-copy', (event) ->
-  span = $(this).parent().find(".external-book-buttons")
-  if span.css('visibility') == 'hidden'
-    span.css 'visibility', 'visible'
-  else
-    span.css 'visibility', 'hidden'
+  $(this).parent().find(".external-book-buttons").toggle()
   event.preventDefault()
 
 $(document).ready(ready)

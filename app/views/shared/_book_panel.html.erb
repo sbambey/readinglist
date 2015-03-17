@@ -11,7 +11,7 @@
 				<p class="other"> <%= "<u>Note from list creator</u>:<br><em>\"#{item.personal_note}\"</em>".html_safe if item.personal_note.present? %></p>
 				<% if item.website.present? || item.amazon_link.present? %>
 					<div class="external-book-links">
-						<a href="#" class="get-a-copy btn btn-default btn-xs">Get a copy</a>
+						<a href="#" class="get-a-copy">Get a copy</a>
 						<span class="external-book-buttons">
 							<%= link_to("Google", item.website, class: "btn btn-default btn-xs btn-add btn-book") if item.website.present? %>
 							<%= link_to("Amazon", item.amazon_link, class: "btn btn-default btn-xs btn-add btn-book") if item.amazon_link.present? %>
