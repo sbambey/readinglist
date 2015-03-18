@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: lists
+#
+#  id          :integer          not null, primary key
+#  name        :text
+#  description :text
+#  user_id     :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  slug        :string
+#
+
 class List < ActiveRecord::Base
 	extend FriendlyId
 	include PgSearch
@@ -12,7 +25,7 @@ class List < ActiveRecord::Base
 
 	accepts_nested_attributes_for :list_items, allow_destroy: true
 
-  validates :name, presence: true, length: { minimum: 3, maximum: 60 }
+  validates :name, presence: true, length: { minimum: 3, maximum: 80 }
   #validates :description, presence: true, length: { minimum: 10, maximum: 100 }
 
 	def should_generate_new_friendly_id?
@@ -20,10 +33,16 @@ class List < ActiveRecord::Base
   end
 
   def self.search(search)
-  	if search
-  		PgSearch.multisearch(search)
+  	if search.present?
+  		search_service.multisearch(search)
   	else
       order("created_at DESC")
   	end
+  end
+
+  private
+
+  def self.search_service
+    PgSearch
   end
 end
